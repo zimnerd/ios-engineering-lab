@@ -17,3 +17,7 @@ import Testing
     #expect(cEd.yearsOfExperience == 25)
     #expect(cEd === copyEddy)
 }
+
+@Test func `<#name#>`() async throws {
+    <#body#>
+}

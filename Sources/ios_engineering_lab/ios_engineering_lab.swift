@@ -15,6 +15,17 @@ class DeveloperAccount {
     }
 }
 
+class Preferences {
+    var notificationsEnabled = true
+}
+
+struct UserProfile {
+    var username: String
+    var preferences: Preferences
+}
+
+
+
 @main
 struct ios_engineering_lab {
 
@@ -34,6 +45,22 @@ struct ios_engineering_lab {
             print(me.yearsOfExperience) // same refence to same class instance so values will be similar
             print(eddy.yearsOfExperience) // same refence to same class instance so values will be similar]
             print(me.name)
+        
+        
+        let original = UserProfile(
+            username: "Eddy",
+            preferences: Preferences()
+        )
+
+        var copy = original
+
+        copy.username = "Edwin"
+        copy.preferences.notificationsEnabled = false
+
+        copy.preferences = Preferences()
         }
 
 }
+
+
+
